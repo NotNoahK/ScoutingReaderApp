@@ -1,3 +1,4 @@
+package ca.lakeeffectrobotics.scoutingreader;
 
 public class Main {
 
