@@ -11,7 +11,6 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.SpringLayout;
 import java.awt.CardLayout;
-import net.miginfocom.swing.MigLayout;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
 import javax.swing.BoxLayout;
