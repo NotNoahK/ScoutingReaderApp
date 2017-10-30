@@ -6,18 +6,23 @@ import java.util.List;
 public class Robot {
 
 	public int number;
-//	public String name; Maybe later
+//	public String name; TODO Maybe later
+	
+	public String path;
 	
 	public Dictionary<String> matchStrings;
-	public Dictionary<Integer> matchInts;
+	public Dictionary<Float> matchFloats;
 	public Dictionary<Boolean> matchBooleans;
 
 	public Dictionary<String> pitStrings;
-	public Dictionary<Integer> pitInts;
+	public Dictionary<Float> pitFloats;
 	public Dictionary<Boolean> pitBooleans;
 	
-	public Robot(int number){
+	public Robot(int number, String filePath){
+		this.number = number;
+		this.path = path;
 		
+		//TODO load file from path and call setMatchData
 	}
 	
 	/**
@@ -25,7 +30,29 @@ public class Robot {
 	 * @param data
 	 */
 	public void setMatchData(String matchData){
-		List<String> lines = Arrays.asList(matchData.split("\n"));
+		splitData(matchData, matchStrings, matchFloats, matchBooleans);
+	}
+	
+	/**
+	 * Takes pit data and loads it in the class
+	 * @param data
+	 */
+	public void setPitData(String pitData){
+		splitData(pitData, pitStrings, pitFloats, pitBooleans);
+	}
+	
+	
+	/**
+	 * 
+	 * Splits the data and adds to the input dictionaries
+	 * 
+	 * @param fullData
+	 * @param strings
+	 * @param floats
+	 * @param booleans
+	 */
+	public static void splitData(String fullData, Dictionary<String> strings, Dictionary<Float> floats, Dictionary<Boolean> booleans){
+		List<String> lines = Arrays.asList(fullData.split("\n"));
 		
 		String[] labels = lines.get(0).split(",");
 		lines.remove(0);
@@ -36,18 +63,28 @@ public class Robot {
 			for(int i=0;i<data.length;i++){
 				
 				//check what type it is
-				
 				try{
-					matchInts.add(labels[i], Integer.parseInt(data[i]));
+					floats.add(labels[i], Float.parseFloat(data[i]));
+					break;
 				}catch(NumberFormatException e){
-					//not an int
+					//not an int, check for bool
 					
-					//check for bool
-					Boolean.parseBoolean("as");
+					if(data[i].toLowerCase().contains("true")){
+						booleans.add(labels[i], true);
+						break;
+					}
+					if(data[i].toLowerCase().contains("false")){
+						booleans.add(labels[i], false);
+						break;
+					}
+					
+					//must be string
+					strings.add(labels[i], data[i]);
 				}
 			}
 			
 		}
+		
 	}
 
 }
