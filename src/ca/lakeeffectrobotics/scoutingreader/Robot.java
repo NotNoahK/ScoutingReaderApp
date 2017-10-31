@@ -6,7 +6,8 @@ import java.util.List;
 public class Robot {
 
 	public int number;
-//	public String name; TODO Maybe later
+	public String name;
+	public String hint;
 	
 	public String path;
 	
@@ -20,9 +21,20 @@ public class Robot {
 	
 	public Robot(int number, String filePath){
 		this.number = number;
-		this.path = path;
+		this.path = filePath;
 		
 		//TODO load file from path and call setMatchData
+		
+	}
+	
+	//temp
+	/**
+	 * Used to add fake data for layout testing
+	 */
+	public Robot(String name, int number, String hint){
+		this.number = number;
+		this.name = name;
+		this.hint = hint;
 	}
 	
 	/**
