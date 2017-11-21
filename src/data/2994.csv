@@ -1,0 +1,5 @@
+Date and Time Of Match,Round,autoHighComplete,autoHighMissed,autoLowComplete,autoLowMissed,autoBaselineGroup,autoGear,teleHighComplete,teleHighFailed,teleLowComplete,teleLowFailed,teleGearComplete,teleGearFailed,Did Climb,died,autoGearPlacement,teleGearDropped,Drive Rating,ClimbExtraData (Includes no attempt),defense,rotors,endgameComments,Scout,UUID,end
+21 10:57:11,4,0,0,0,0,0,0,0,0,0,0,1,1,1,0,-1,1,1.0,0,0,3,"",Beckham Pope,98c4403c-2c96-4c41-a6ae-77f4db7e58c2,end
+21 11:28:01,7,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,3.0,0,0,1,"Went stationary for 20 seconds shortly after Tele-Op started",Shawn Song,3eb4d373-a0c1-4e84-beab-7c22be0135ad,end
+21 12:55:15,15,0,0,0,0,0,0,5,1,0,0,1,0,1,0,0,0,3.0,0,0,3,"",Renee,27930d5d-1c63-45f3-a444-7dfdff84edc1,end
+21 12:15:03,17,0,0,0,0,0,0,0,0,0,0,3,0,1,0,0,0,2.0,0,0,2,"took a while to get gears from human station	",Eric,f4f3c6b8-b1fb-4704-a20b-07045e1cecab,end
