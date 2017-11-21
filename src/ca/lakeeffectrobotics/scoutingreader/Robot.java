@@ -77,8 +77,13 @@ public class Robot {
 			
 			for(int i=0;i<data.length;i++){
 				
+				//placeholder since current data has no actual booleans
 				if(labels[i].equals("autoBaselineGroup") || labels[i].equals("autoGear") || labels[i].equals("Did Climb") || labels[i].equals("died") || labels[i].equals("defense")){
-					booleans.add(labels[i], Boolean.parseBoolean(data[i]));
+					if(data[i].equals("1")){
+						booleans.add(labels[i], true);
+					} else{
+						booleans.add(labels[i], false);
+					}
 					continue;
 				}
 				
