@@ -81,7 +81,7 @@ public class Main {
 	            br.close();
 	            
 	            //Set text on the top
-	            Robot robot = new Robot("NAME", Integer.parseInt(files[i].getName().replace(".csv", "")), "This is where a note would go if we had anything to tell you");
+	            Robot robot = new Robot("NAME", Integer.parseInt(files[i].getName().replace(".csv", "")), "Test message");
 				robot.setMatchData(file);
 	            robots.add(robot);
 	        }

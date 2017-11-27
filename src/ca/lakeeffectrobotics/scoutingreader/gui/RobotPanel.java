@@ -165,22 +165,23 @@ public class RobotPanel extends JPanel implements MouseListener {
 				
 				String data = match.getAllDataByLabel(label);
 				String labelOut = "";
-				if(label.contains("auto")) labelOut += "Auto ";
-				if(label.contains("tele")) labelOut += "Tele ";
-				if(label.contains("High")) labelOut += "high goals ";
-				if(label.contains("Low")) labelOut += "low goals ";
-				if(label.contains("Gear")) labelOut += "gears ";
-				if(label.contains("Baseline")) labelOut += "baseline reached";
-				if(label.contains("Did Climb")) labelOut += "Climed";
-				if(label.contains("died")) labelOut += "Died on field";
-				if(label.contains("Drive Rating")) labelOut += "Drive rating";
-				if(label.contains("defense")) labelOut += "Played defense";
-				if(label.contains("rotors")) labelOut += "Rotors turning";
-				if(label.contains("Comments")) labelOut += "Comments";
-				if(label.contains("Scout")) labelOut += "Scout";
-				if(label.contains("Complete")) labelOut += "scored";
-				if(label.contains("Missed")) labelOut += "failed";
-				if(label.contains("Dropped")) labelOut += "dropped";
+//				if(label.contains("auto")) labelOut += "Auto ";
+//				if(label.contains("tele")) labelOut += "Tele ";
+//				if(label.contains("High")) labelOut += "high goals ";
+//				if(label.contains("Low")) labelOut += "low goals ";
+//				if(label.contains("Gear")) labelOut += "gears ";
+//				if(label.contains("Baseline")) labelOut += "baseline reached";
+//				if(label.contains("Did Climb")) labelOut += "Climed";
+//				if(label.contains("died")) labelOut += "Died on field";
+//				if(label.contains("Drive Rating")) labelOut += "Drive rating";
+//				if(label.contains("defense")) labelOut += "Played defense";
+//				if(label.contains("rotors")) labelOut += "Rotors turning";
+//				if(label.contains("Comments")) labelOut += "Comments";
+//				if(label.contains("Scout")) labelOut += "Scout";
+//				if(label.contains("Complete")) labelOut += "scored";
+//				if(label.contains("Missed")) labelOut += "failed";
+//				if(label.contains("Dropped")) labelOut += "dropped";
+				labelOut = label;
 				paneText += labelOut + ": " + data + "\n";
 			}
 			

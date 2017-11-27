@@ -322,7 +322,10 @@ public class DataSelection extends JFrame implements ItemListener, MouseListener
 		
 		//Display data
 		Robot r = main.getRobotByNumber(selectedRobot);
-		main.frame.robotPanel.loadData(r, selectedMatches, selectedLabels);
+		for(RobotPanel robotPanel: main.frame.robotPanels){
+			robotPanel.loadData(r, selectedMatches, selectedLabels);
+
+		}
 	}
 	
 	public void clearBoxes(){
