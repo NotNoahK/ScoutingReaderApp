@@ -1,0 +1,4 @@
+for i = 1; i >= round(num)/2 
+	if num*2 > round
+		break
+	addSplitPane
