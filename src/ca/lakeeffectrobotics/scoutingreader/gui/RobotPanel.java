@@ -163,6 +163,11 @@ public class RobotPanel extends JPanel implements MouseListener {
 			for(String label: labels){
 				Match match = robot.getMatchByNumber(matchNum);
 				
+				if(match == null){
+					System.out.println("Robot " + robot.number + " was not in " + matchNum );
+					continue;
+				}
+				
 				String data = match.getAllDataByLabel(label);
 				String labelOut = "";
 //				if(label.contains("auto")) labelOut += "Auto ";
